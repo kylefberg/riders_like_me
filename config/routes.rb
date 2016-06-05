@@ -4,6 +4,12 @@ Rails.application.routes.draw do
   root to: 'home#index'
   resources :riders
   resources :users, :only
+
+  resources :home
+
+  resources :sign_up do
+    resources :sign_up
+  end
 end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
