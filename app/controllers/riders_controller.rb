@@ -8,7 +8,7 @@ class RidersController < ApplicationController
     if @rider.save
       session[:rider_id] = @rider.id
       flash[:notice] = "Welcome, you have signed up!"
-      redirect_to root_path
+      redirect_to edit_rider_path(@rider)
     else
       render "new"
     end
@@ -17,6 +17,10 @@ class RidersController < ApplicationController
   def index
     @notice = flash[:notice]
     @riders = Rider.all
+  end
+
+  def edit
+    @rider = Rider.find params[:id]
   end
 
   private
