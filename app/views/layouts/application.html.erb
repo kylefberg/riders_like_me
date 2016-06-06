@@ -11,12 +11,13 @@
 <body class="container">
   <header class="navbar navbar-fixed-top navbar-inverse">
     <ul class="nav navbar-nav center">
-      <a href="app/views/home/index.html.erb">Home</a>
+      <%= link_to 'Home', root_path %>
       <% if current_rider %>
         <%= link_to 'Search', new_rider_path %>
+        <%= link_to 'Log Out', logout_path, method: :delete %>
       <% else %>
         <%= link_to 'Sign Up', new_rider_path %>
-        <%= link_to 'Log In', new_rider_path %>
+        <%= link_to 'Log In', new_session_path %>
       <% end %>
       <!-- Riders Like Me -->
     </ul>

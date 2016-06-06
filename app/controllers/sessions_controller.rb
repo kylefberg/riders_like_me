@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
   def create
     rider = Rider.find_by(email: params[:email])
-    if user && user.authenticate(params[:password])
+    if rider && rider.authenticate(params[:password])
       session[:rider_id] = rider.id
       redirect_to root_path, notice: 'Logged in!'
     else
