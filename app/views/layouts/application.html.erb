@@ -5,23 +5,20 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="container">
   <header class="navbar navbar-fixed-top navbar-inverse">
-    <ul class="nav navbar-nav pull-right">
-      <li>
-        <a href="home">Home</a>
-      </li>
-      <li>
-        <a href="sign up">Search</a>
-      </li>
-        <!-- Riders Like Me -->
-      <li>
-        <a href="#">Sign Up</a>
-      </li>
-      <li>
-        <a href="#">Log In</a>
-      </li>
+    <ul class="nav navbar-nav center">
+      <a href="app/views/home/index.html.erb">Home</a>
+      <% if current_rider %>
+        <%= link_to 'Search', new_rider_path %>
+      <% else %>
+        <%= link_to 'Sign Up', new_rider_path %>
+        <%= link_to 'Log In', new_rider_path %>
+      <% end %>
+      <!-- Riders Like Me -->
     </ul>
   </header>
 
