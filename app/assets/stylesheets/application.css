@@ -15,8 +15,9 @@
  *= require_self
  */
 
-
-
+ul {
+  align-content: center;
+}
 div {
   text-align: center;
   padding-top: 20px;
