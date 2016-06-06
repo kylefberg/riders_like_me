@@ -13,11 +13,15 @@ class RidersController < ApplicationController
       render "new"
     end
   end
+
   def index
+    @notice = flash[:notice]
     @riders = Rider.all
   end
+
   private
-    def rider_params
-      params.require(:rider).permit(:name, :email, :password, :password_confirmation)
-    end
+
+  def rider_params
+    params.require(:rider).permit(:name, :email, :password, :password_confirmation)
+  end
 end

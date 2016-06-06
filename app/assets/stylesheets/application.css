@@ -15,19 +15,17 @@
  *= require_self
  */
 
-ul {
-  align-content: center;
+.container {
+  display: flex;
+  justify-content: space-around;
 }
 div {
   text-align: center;
   padding-top: 20px;
 }
-
-
 h1 {
   text-align: center;
 }
-
 h2 {
   text-align: center;
 }

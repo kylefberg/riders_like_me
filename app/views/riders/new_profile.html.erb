@@ -1,0 +1,50 @@
+<h1>About Me</h1>
+<%= form_for @rider do |f| %>
+  <% if @rider.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @rider.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :sex %>
+    <%= f.text_field :sex %>
+  </div>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :my_experiance %>
+    <%= f.text_field :my_experiance %>
+  </div>
+  <div class="field">
+    <%= f.label :my_interest %>
+    <%= f.text_field :my_interest %>
+  </div>
+  <div class="field">
+    <%= f.label :my_bike %>
+    <%= f.text_field :my_bike %>
+  </div>
+  <div class="field">
+    <%= f.label :photo %>
+    <%= f.text_field :my_photo %>
+  </div>
+  <div class="field">
+    <%= f.label :my_bio %>
+    <%= f.text_field :my_bio %>
+  </div>
+  <div class="actions"><%= f.submit %></div>
+<% end %>
