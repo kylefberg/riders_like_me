@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20160605184958) do
     t.string   "email"
     t.string   "password_digest"
     t.string   "phone"
-    t.string   "my_exeriance"
+    t.string   "my_experiance"
     t.string   "my_interests"
     t.string   "my_bike"
     t.string   "my_photo"

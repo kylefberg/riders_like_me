@@ -12,9 +12,10 @@ private
 
   helper_method  :current_rider
   def current_rider
-    @current_rider ||= Rider.find_by(id: session[:rider_id]) if session[:rider_id]
+    @current_rider ||= Rider.find_by(id: session[:rider_id])if session[:rider_id]
   end
   def authorize
-    redirect_to login_path, alert: 'Not authorized - you must be logged in!' if current_rider.nil?
+    redirect_to login_path, alert: 'Not authorized - you must be logged in!'if current_rider.nil?
   end
 end
+

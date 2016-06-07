@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
 
   get '/login', to: 'sessions#new'
-  get '/signup', to: 'profiles#new'
+  get '/signup', to: 'sessions#edit'
   delete '/logout', to: 'sessions#destroy'
 end

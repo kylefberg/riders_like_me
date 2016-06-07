@@ -27,12 +27,16 @@
     <%= f.text_field :phone %>
   </div>
   <div class="field">
-    <%= f.label :my_experiance %>
     <%= f.text_field :my_experiance %>
+      <select my_experiance="select">
+      <option value="beginner">beginner</option>
+      <option value="intermediate">intermediate</option>
+      <option value="advanced">advanced</option>
+      </select>
   </div>
   <div class="field">
-    <%= f.label :my_interest %>
-    <%= f.checkbox :my_interest %>
+    <%= f.label :my_interests %>
+    <%= f.check_box :my_interests %>
   </div>
   <div class="field">
     <%= f.label :my_bike %>
