@@ -1,1 +1,38 @@
-profile.html.erb
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+<h4><strong>Your Info</strong></h4>
+<p><%= @rider.name %></p>
+<p><%= @rider.sex %></p>
+<p><%= @rider.email %></p>
+<p><%= @rider.phone %></p>
+
+</div>
+
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+<p><%= @rider.my_photo %></p>
+</div>
+
+
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+<h4><strong>Your Experience</strong></h4>
+<p><%= @rider.my_experience %></p>
+<h4><strong>Your Interests</strong></h4>
+<% if @rider.street %> <p>Street!</p> <% end %>
+<% if @rider.adventure %> <p>Adventure!</p> <% end %>
+<% if @rider.duel_sport %> <p>Duel Sport!</p> <% end %>
+<% if @rider.dirt %> <p>Dirt!</p> <% end %>
+</div>
+<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+  <a href="#" class="thumbnail">
+    <img data-src="#" alt="">
+<p><%= @rider.my_bike %></p>
+  </a>
+</div>
+<div class="container">
+<p><%= @rider.my_bio %></p>
+</div>
+<br>
+<a class="btn btn-default" href="#" role="Edit">Edit</a>
+<a class="btn btn-default" href="#" role="Delete">Delete</a>
+
+
+

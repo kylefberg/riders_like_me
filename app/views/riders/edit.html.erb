@@ -31,20 +31,26 @@
     <%= f.text_field :phone %>
   </div>
   <div class="field">
-    <%= f.label :my_experiance %>
-      <select my_experiance="select">
-      <option value="beginner">beginner</option>
-      <option value="intermediate">intermediate</option>
-      <option value="advanced">advanced</option>
-      </select>
+    <%= f.label :my_experience %>
+    <%= f.select(:my_experience, [['Beginner', 'Beginner'], ['Intermediate', 'Intermediate'], ['Advanced', 'Advanced']]) %>
+
+  </div>
+  <h5><strong>My Interests:</strong></h5>
+  <div class="field">
+    <%= f.check_box(:street) %>
+    <%= label_tag(:street, "Street") %>
   </div>
   <div class="field">
-    <%= f.label :my_interests %>
-    <%= f.select :my_interests, [["Street", "street"], ["Adventure", "adventure"], ["Duel Sport", "duel_sport"], ["Dirt", "dirt"] ], {prompt: "Select Interests"}, {:multiple => true, class: "input-md"} %>
+    <%= f.check_box(:adventure) %>
+    <%= label_tag(:adventure, "Adventure") %>
   </div>
   <div class="field">
-    <%= f.label :permission %>
-    <%= f.check_box :my_interests %>
+    <%= f.check_box(:duel_sport) %>
+    <%= label_tag(:duel_sport, "Duel Sport") %>
+  </div>
+  <div class="field">
+    <%= f.check_box(:dirt) %>
+    <%= label_tag(:dirt, "Dirt") %>
   </div>
   <div class="field">
     <%= f.label :my_bike %>

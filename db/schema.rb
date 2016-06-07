@@ -28,8 +28,7 @@ ActiveRecord::Schema.define(version: 20160605184958) do
     t.string   "email"
     t.string   "password_digest"
     t.string   "phone"
-    t.string   "my_experiance"
-    t.boolean  "my_interests"
+    t.string   "my_experience"
     t.boolean  "street"
     t.boolean  "adventure"
     t.boolean  "duel_sport"
@@ -44,7 +43,7 @@ ActiveRecord::Schema.define(version: 20160605184958) do
   create_table "searches", force: :cascade do |t|
     t.string   "name"
     t.string   "sex"
-    t.string   "experiance"
+    t.string   "experience"
     t.string   "interest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

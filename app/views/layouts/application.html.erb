@@ -14,9 +14,11 @@
       <%= link_to 'Home', root_path %>
       &nbsp;&nbsp;|&nbsp;&nbsp;
       <% if current_rider %>
+        <%= link_to 'Search', new_rider_path %>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
         Welcome, <%= current_rider.name %>
         &nbsp;&nbsp;|&nbsp;&nbsp;
-        <%= link_to 'Search', new_rider_path %>
+        <%= link_to 'Profile', rider_path(current_rider.id) %>
         &nbsp;&nbsp;|&nbsp;&nbsp;
         <%= link_to 'Log Out', session_path('dummy'), method: :delete %>
       <% else %>

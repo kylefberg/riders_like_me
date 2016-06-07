@@ -3,7 +3,7 @@ class CreateSearches < ActiveRecord::Migration
     create_table :searches do |t|
       t.string :name
       t.string :sex
-      t.string :experiance
+      t.string :experience
       t.string :interest
 
       t.timestamps null: false

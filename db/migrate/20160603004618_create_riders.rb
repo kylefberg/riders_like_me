@@ -6,8 +6,7 @@ class CreateRiders < ActiveRecord::Migration
       t.string  :email
       t.string  :password_digest
       t.string  :phone
-      t.string  :my_experiance
-      t.boolean :my_interests
+      t.string  :my_experience
       t.boolean :street
       t.boolean :adventure
       t.boolean :duel_sport

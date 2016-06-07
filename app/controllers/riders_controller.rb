@@ -17,6 +17,11 @@ class RidersController < ApplicationController
   def index
     @notice = flash[:notice]
     @riders = Rider.all
+    if params[:search]
+      @riders = Rider.search(params[:search])
+    else
+      @riders = Rider.all
+    end
   end
 
   def edit
@@ -24,12 +29,19 @@ class RidersController < ApplicationController
   end
 
   def show
-    @riders = Rider.find params[:id]
+    @rider = Rider.find params[:id]
+  end
+
+  def update
+    @rider = Rider.find params[:id]
+    @rider.update (rider_params)
+    redirect_to @rider
   end
 
   private
 
   def rider_params
-    params.require(:rider).permit(:name, :email, :password, :password_confirmation)
+    params.require(:rider).permit(:name, :email, :password, :my_experience,
+      :password_confirmation, :phone, :my_bike, :my_photo, :my_bio, :street, :adventure, :duel_sport, :dirt)
   end
 end
