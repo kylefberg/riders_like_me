@@ -24,8 +24,15 @@ ActiveRecord::Schema.define(version: 20160605184958) do
 
   create_table "riders", force: :cascade do |t|
     t.string   "name"
+    t.string   "sex"
     t.string   "email"
     t.string   "password_digest"
+    t.string   "phone"
+    t.string   "my_exeriance"
+    t.string   "my_interests"
+    t.string   "my_bike"
+    t.string   "my_photo"
+    t.text     "my_bio"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
