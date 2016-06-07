@@ -16,7 +16,11 @@
   </div>
   <div class="field">
     <%= f.label :sex %>
-    <%= f.text_field :sex %>
+      <select my_experiance="select">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Undecided">Undecided</option>
+      </select>
   </div>
   <div class="field">
     <%= f.label :email %>
@@ -27,7 +31,7 @@
     <%= f.text_field :phone %>
   </div>
   <div class="field">
-    <%= f.text_field :my_experiance %>
+    <%= f.label :my_experiance %>
       <select my_experiance="select">
       <option value="beginner">beginner</option>
       <option value="intermediate">intermediate</option>
@@ -36,6 +40,10 @@
   </div>
   <div class="field">
     <%= f.label :my_interests %>
+    <%= f.select :my_interests, [["Street", "street"], ["Adventure", "adventure"], ["Duel Sport", "duel_sport"], ["Dirt", "dirt"] ], {prompt: "Select Interests"}, {:multiple => true, class: "input-md"} %>
+  </div>
+  <div class="field">
+    <%= f.label :permission %>
     <%= f.check_box :my_interests %>
   </div>
   <div class="field">

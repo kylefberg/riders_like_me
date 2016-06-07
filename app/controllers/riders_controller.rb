@@ -23,6 +23,10 @@ class RidersController < ApplicationController
     @rider = Rider.find params[:id]
   end
 
+  def show
+    @riders = Rider.find params[:id]
+  end
+
   private
 
   def rider_params
