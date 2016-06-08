@@ -32,11 +32,7 @@
   <p><%= @rider.my_bio %></p>
 </div>
 
-
-
-
-<a class="btn btn-default" href="/riders/<%= current_rider.id%>/edit" role="Edit">Edit</a>
-<div class="btn btn-default"><%= link_to "edit", rider_path(id: @rider.id), :method => :edit %></div>
-<div class="btn btn-default"><%= link_to "delete", rider_path(id: @rider.id), :method => :delete %></div>
+<div class="btn btn-default"><%= link_to "edit", edit_rider_path(current_rider.id)%></div>
+<div class="btn btn-default"><%= link_to "delete", rider_path, :method => :delete %></div>
 
 
