@@ -8,7 +8,6 @@
 </div>
 
 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-<img class="profile-pic" src="<%= @rider.my_photo %>">
 </div>
 
 
@@ -23,9 +22,9 @@
 </div>
 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
   <a href="#" class="thumbnail">
-    <img data-src="#" alt="">
-    <p><%= @rider.my_bike %></p>
+    <%= image_tag @rider.profile_photo.url(:square) %>
   </a>
+    <p><%= @rider.my_bike %></p>
 </div>
 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
   <h4>My Bio</h4>

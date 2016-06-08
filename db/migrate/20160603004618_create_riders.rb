@@ -12,7 +12,6 @@ class CreateRiders < ActiveRecord::Migration
       t.boolean :duel_sport
       t.boolean :dirt
       t.string  :my_bike
-      t.string  :my_photo
       t.text    :my_bio
 
       t.timestamps null: false

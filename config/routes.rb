@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'riders#index'
 
-  resources :riders, only: [:new, :create, :edit, :show, :update, :destroy]
+  resources :riders, only: [:new, :create, :index, :edit, :show, :update, :destroy]
 
   resources :sessions, only: [:new, :create, :edit, :destroy]
 

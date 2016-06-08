@@ -7,7 +7,7 @@
 </div>
 
 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-  <p><img class="profile-pic" src="<%= @rider.my_photo %>" class="thumbnail"></p>
+  <p><img class="profile-photo" src="<%= @rider.profile_photo %>" class="thumbnail"></p>
 </div>
 
 
@@ -48,7 +48,7 @@
         <div class="panel-footer">
           <small><%= comment.commenter.name %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span class="text-muted"><%= comment.created_at%></span></small>
           <% if comment.commenter == current_rider %>
-            <%= link_to 'X', delete_comment_path(comment.id), {method: :delete, class: 'btn btn-xs btn-danger'} %>
+            &nbsp;&nbsp;&nbsp;<%= link_to 'X', delete_comment_path(comment.id), {method: :delete, class: 'btn btn-xs btn-danger'} %>
           <% end %>
         </div>
       </div>
