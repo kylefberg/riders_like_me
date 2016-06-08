@@ -1,4 +1,6 @@
 class RidersController < ApplicationController
+  before_action :authorize, only: [:details]
+
   def new
     @rider = Rider.new
   end
@@ -16,7 +18,6 @@ class RidersController < ApplicationController
 
   def index
     @notice = flash[:notice]
-    @riders = Rider.all
     if params[:search]
       @riders = Rider.search(params[:search])
     else
@@ -30,7 +31,6 @@ class RidersController < ApplicationController
 
   def show
     @rider = Rider.find params[:id]
-
   end
 
   def update
@@ -43,6 +43,11 @@ class RidersController < ApplicationController
     @rider = Rider.find(params[:id])
     @rider.destroy
     redirect_to root_path
+  end
+
+  def details
+    @rider = Rider.find(params[:id])
+    @comment = Comment.new
   end
 
   private

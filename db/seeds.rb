@@ -23,3 +23,11 @@ rider = Rider.new(
   password_confirmation: "abc123"
 )
 rider.save
+
+rider = Rider.new(
+  name: "Al Chohal",
+  email: "drank@drank.com",
+  password: "abc123",
+  password_confirmation: "abc123"
+)
+rider.save
