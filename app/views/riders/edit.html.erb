@@ -33,7 +33,6 @@
   <div class="field">
     <%= f.label :my_experience %>
     <%= f.select(:my_experience, [['Beginner', 'Beginner'], ['Intermediate', 'Intermediate'], ['Advanced', 'Advanced']]) %>
-
   </div>
   <h5><strong>My Interests:</strong></h5>
   <div class="field">
@@ -62,7 +61,7 @@
   </div>
   <div class="field">
     <%= f.label :my_bio %>
-    <%= f.text_field :my_bio %>
+    <%= f.text_area :my_bio %>
   </div>
   <div class="actions"><%= f.submit %></div>
 <% end %>

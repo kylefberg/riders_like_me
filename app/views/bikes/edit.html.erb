@@ -1,0 +1,19 @@
+<h1>My Bikes</h1>
+<%= form_for @bikes do |f| %>
+  <% if @bikes.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @rider.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <div class="field">
+    <%= f.label :my_bike %>
+    <%= f.text_field :my_bike %>
+  </div>

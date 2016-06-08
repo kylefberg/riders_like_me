@@ -1,3 +1,5 @@
 # Riders Like Me
 
-It's a trip!
+Explanations of the technologies used.
+Installation/startup instructions.
+Unsolved problems, etc.
