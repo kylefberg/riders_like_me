@@ -30,12 +30,22 @@ class RidersController < ApplicationController
 
   def show
     @rider = Rider.find params[:id]
+
   end
 
   def update
     @rider = Rider.find params[:id]
     @rider.update (rider_params)
     redirect_to @rider
+  end
+
+  def destroy
+    @rider = Rider.new(rider_params)
+    if @rider.destroy
+      session[:rider_id] = @rider.id
+      flash[:notice] = "You're deleted!"
+      redirect_to (@rider)
+    end
   end
 
   private

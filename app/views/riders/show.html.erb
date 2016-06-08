@@ -27,12 +27,15 @@
 <p><%= @rider.my_bike %></p>
   </a>
 </div>
-<div class="container">
+<div class="container-fluid">
+<h4>My Bio</h4>
 <p><%= @rider.my_bio %></p>
 </div>
+
+
 <br>
-<a class="btn btn-default" href="#" role="Edit">Edit</a>
-<a class="btn btn-default" href="#" role="Delete">Delete</a>
+<a class="btn btn-default" href="/riders/<%= current_rider.id%>/edit" role="Edit">Edit</a>
+<a class="btn btn-default" href="/riders/<%= current_rider.id%>/destroy" role="Destroy">Delete</a>
 
 
 
