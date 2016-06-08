@@ -40,18 +40,15 @@ class RidersController < ApplicationController
   end
 
   def destroy
-    @rider = Rider.new(rider_params)
-    if @rider.destroy
-      session[:rider_id] = @rider.id
-      flash[:notice] = "You're deleted!"
-      redirect_to (@rider)
-    end
+    @rider = Rider.find(params[:id])
+    @rider.destroy
+    redirect_to root_path
   end
 
   private
 
   def rider_params
     params.require(:rider).permit(:name, :email, :password, :my_experience,
-      :password_confirmation, :phone, :my_bike, :my_photo, :my_bio, :street, :adventure, :duel_sport, :dirt)
+    :password_confirmation, :phone, :my_bike, :my_photo, :my_bio, :street, :adventure, :duel_sport, :dirt)
   end
 end
