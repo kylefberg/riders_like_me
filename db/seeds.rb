@@ -14,7 +14,7 @@ rider = Rider.new(
   dirt: false,
   my_bike: "Yamaha",
   my_bio: "I really like myself",
-  profile_photo: File.open(File.join(Rails.root, '/app/assets/images/Vstrom.jpg'))
+  profile_photo: File.open(File.join(Rails.root, '/assets/images/Vstrom.jpg'))
 )
 rider.save
 
@@ -32,7 +32,7 @@ rider = Rider.new(
   dirt: false,
   my_bike: "Suzuki",
   my_bio: "I really like myself",
-  profile_photo: File.open(File.join(Rails.root, '/app/assets/images/Hanner.jpg'))
+  profile_photo: File.open(File.join(Rails.root, '/assets/images/Hanner.jpg'))
 
 )
 rider.save
@@ -51,7 +51,7 @@ rider = Rider.new(
   dirt: false,
   my_bike: "Suzuki",
   my_bio: "I really like adventures",
-  profile_photo: File.open(File.join(Rails.root, '/app/assets/images/Dirt.jpg'))
+  profile_photo: File.open(File.join(Rails.root, '/assets/images/Dirt.jpg'))
 )
 rider.save
 
@@ -69,7 +69,7 @@ rider = Rider.new(
   dirt: false,
   my_bike: "Hardly a Harley",
   my_bio: "I drink sometimes...",
-  profile_photo: File.open(File.join(Rails.root, '/app/assets/images/Drank.jpg'))
+  profile_photo: File.open(File.join(Rails.root, '/assets/images/Drank.jpg'))
 )
 rider.save
 
@@ -87,7 +87,7 @@ rider = Rider.new(
   dirt: false,
   my_bike: "Suzuki",
   my_bio: "I'm getting ready to go on an adventure'",
-  profile_photo: File.open(File.join(Rails.root, '/app/assets/images/bill.jpg'))
+  profile_photo: File.open(File.join(Rails.root, '/assets/images/bill.jpg'))
 )
 rider.save
 
@@ -105,6 +105,6 @@ rider = Rider.new(
   dirt: false,
   my_bike: "Suzuki",
   my_bio: "I would like to meet people who aren't crazy like me.",
-  profile_photo: File.open(File.join(Rails.root, '/app/assets/images/bride.jpg'))
+  profile_photo: File.open(File.join(Rails.root, '/assets/images/bride.jpg'))
 )
 rider.save
