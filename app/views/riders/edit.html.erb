@@ -1,72 +1,76 @@
-<div class="class row">
+<div class="row col-xs-4 col-xs-offset-4">
   <h1>About Me</h1>
-  <%= form_for @rider do |f| %>
-  <% if @rider.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-      <ul>
-        <% for message in @rider.errors.full_messages %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+    <% if @rider.errors.any? %>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+          <ul>
+            <% for message in @rider.errors.full_messages %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+      </div>
+    <% end %>
+    <%= form_for @rider do |f| %>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, autofocus: true, class: "form-control" %>
     </div>
-  <% end %>
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name, autofocus: true %>
-  </div>
-  <div class="field">
-    <%= f.label :sex %>
-      <select my_experiance="select">
-      <option value="Male">Male</option>
-      <option value="Female">Female</option>
-      <option value="Undecided">Undecided</option>
-      </select>
-  </div>
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %>
-    <%= f.text_field :phone %>
-  </div>
+    <div class="form-group">
+      <%= f.label :sex %>
+        <select my_experiance="select" class="form-control">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Undecided">Undecided</option>
+        </select>
+    </div>
+    <div class="form-group">
+      <%= f.label :email %>
+      <%= f.text_field :email, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :phone %>
+      <%= f.text_field :phone, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :my_experience %>
+      <%= f.select(:my_experience, [['Beginner', 'Beginner'], ['Intermediate', 'Intermediate'], ['Advanced', 'Advanced']], class: "form-control") %>
+    </div>
+    <label>My Interests:</label>
+    <div class="checkbox">
+      <label>
+      <%= f.check_box :street %> Street
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+      <%= f.check_box :adventure %> Adventure
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+      <%= f.check_box :dual_sport %> Dual Sport
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+      <%= f.check_box :dirt %> Dirt
+      </label>
+    </div>
+    <div class="form-group">
+      <%= f.label :my_bike %>
+      <%= f.text_field :my_bike, class: "form-control" %>
+    </div>
+    <div class="photo_input form-group">
+      <%= f.label :profile_photo %>
+      <%= f.file_field :profile_photo, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :my_bio %>
+      <%= f.text_area :my_bio, class: "form-control" %>
+    </div>
+    <div class="text-center">
+      <%= f.submit "Save Profile", class: "btn btn-info" %>
+    </div>
+    <% end %>
+  <br><br><br>
 </div>
-
-<div class="class row">
-  <div class="field">
-    <%= f.label :my_experience %>
-    <%= f.select(:my_experience, [['Beginner', 'Beginner'], ['Intermediate', 'Intermediate'], ['Advanced', 'Advanced']]) %>
-  </div>
-  <h5><strong>My Interests:</strong></h5>
-  <div class="field">
-    <%= f.check_box(:street) %>
-    <%= label_tag(:street, "Street") %>
-  </div>
-  <div class="field">
-    <%= f.check_box(:adventure) %>
-    <%= label_tag(:adventure, "Adventure") %>
-  </div>
-  <div class="field">
-    <%= f.check_box(:dual_sport) %>
-    <%= label_tag(:dual_sport, "Dual Sport") %>
-  </div>
-  <div class="field">
-    <%= f.check_box(:dirt) %>
-    <%= label_tag(:dirt, "Dirt") %>
-  </div>
-  <div class="field">
-    <%= f.label :my_bike %>
-    <%= f.text_field :my_bike %>
-  </div>
-  <div class="photo_input">
-    <%= f.label :profile_photo %>
-    <%= f.file_field :profile_photo %>
-  </div>
-  <div class="field">
-    <%= f.label :my_bio %>
-    <%= f.text_area :my_bio %>
-  </div>
-</div>
-  <div class="actions"><%= f.submit %></div>
-<% end %>

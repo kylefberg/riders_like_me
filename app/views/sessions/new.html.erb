@@ -1,13 +1,17 @@
-<h1>Log In</h1>
-<p id="alert"><%= alert %></p>
-<%= form_tag sessions_path do %>
-  <div class="field">
+<div class="row col-xs-4 col-xs-offset-4">
+  <h1>Log In</h1>
+    <p id="alert"><%= alert %></p>
+      <%= form_tag sessions_path do %>
+  <div class="form-group">
     <%= label_tag :email %>
-    <%= text_field_tag :email, params[:email], autofocus: true %>
+    <%= text_field_tag :email, params[:email], autofocus: true, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= label_tag :password %>
-    <%= password_field_tag :password %>
+    <%= password_field_tag :password, nil, class: "form-control" %>
   </div>
-  <div class="actions"><%= submit_tag "Log In" %></div>
-<% end %>
+  <div class="text-center">
+    <%= submit_tag "Log In", class: "btn btn-info" %>
+  </div>
+  <% end %>
+</div>

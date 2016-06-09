@@ -1,6 +1,5 @@
 class RidersController < ApplicationController
   before_action :authorize, only: [:details]
-
   def new
     @rider = Rider.new
   end

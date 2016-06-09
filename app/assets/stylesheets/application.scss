@@ -26,9 +26,8 @@
   border-radius: 9px;
 }
 
-div {
-  text-align: center;
-  padding-top: 20px;
+.my-nav {
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -61,7 +60,7 @@ body {
 
 .photo_input {
   display: inline-block;
-  width: 30%
+  width: 100px;
 }
 
 .comments {
@@ -76,9 +75,10 @@ body {
 #edit_buttons {
   display: flex;
   padding: 10px;
+  color: black;
 }
 
-#edit {
+.edit {
   min-width: 64px;
 }
 
