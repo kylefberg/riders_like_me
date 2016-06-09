@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'searches/index'
+
   root 'riders#index'
 
   resources :riders, only: [:new, :create, :index, :edit, :show, :update, :destroy]
@@ -7,6 +9,7 @@ Rails.application.routes.draw do
 
   get '/login', to: 'sessions#new'
   get '/signup', to: 'sessions#edit'
+  get '/searches/index', to: 'searches#index'
 
   post '/rider', to: 'riders#create'
   patch '/riders/:id', to: 'riders#update'
@@ -17,5 +20,6 @@ Rails.application.routes.draw do
 
   delete '/logout', to: 'sessions#destroy'
   delete '/riders/:id', to: 'sessions#new'
+
 
 end

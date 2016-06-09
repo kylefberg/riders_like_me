@@ -2,7 +2,7 @@
 <div class="jumbotron">
   <h4><%= @notice %></h4>
   <div class="container">
-    <img class="center-block" src="https://s-media-cache-ak0.pinimg.com/236x/42/1a/97/421a9706bd6bb340225656a9619ee207.jpg" alt="Adventure Riding">
+    <img class="center-block" src="/alaska.jpg" alt="Adventure Riding">
   </div>
 </div>
 <h2>
@@ -13,7 +13,7 @@
 <div class="container">
   <div class="row">
     <% @riders.each do |rider| %>
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
         <% if rider != current_rider %>
             <a href="/details/<%= rider.id %>" >
               <div class="thumbnail" id="profiles">

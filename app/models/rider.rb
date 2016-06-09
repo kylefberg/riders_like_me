@@ -19,3 +19,16 @@ after_initialize :set_image
 
   validates_attachment_content_type :profile_photo, :content_type => /\Aimage\/.*\Z/
 end
+
+  def self.search rider
+    wildcarded_rider = "%#{rider}%"
+    where(
+      "name ILIKE :name OR experience ILIKE :experience OR adventure ILIKE :adventure OR street ILIKE :street OR dual_sport ILIKE :dual_sport OR dirt ILIKE :dirt",
+      name:         wildcarded_rider,
+      experience:   wildcarded_rider,
+      adventure:    wildcarded_rider,
+      street:       wildcarded_rider,
+      dual_sport:   wildcarded_rider,
+      dirt:         wildcarded_rider
+      )
+  end

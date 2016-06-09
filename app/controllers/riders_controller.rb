@@ -26,10 +26,6 @@ class RidersController < ApplicationController
     end
   end
 
-
-
-
-
   def edit
     @rider = Rider.find params[:id]
   end

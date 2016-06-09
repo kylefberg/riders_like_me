@@ -14,11 +14,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 .thumbnail {
   background-color: lightgray;
   border: 1px solid black;
 }
 
+.jumbotron {
+  padding-top: 5px;
+}
 .container {
   display: flex;
   justify-content: space-around;
@@ -44,23 +48,29 @@ h5 {
 
 .profile-photo {
   width: 100%;
-  border: 4px solid black;
+  border: 2px solid black;
   border-radius: 9px;
 }
 
 #profiles {
   max-width: 240px;
-
 }
 
 body {
   padding: 20px;
   margin: 20px !important;
+  background-color: 0000;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .photo_input {
   display: inline-block;
   width: 100px;
+}
+
+.authorize {
+  text-align: center;
 }
 
 .comments {
