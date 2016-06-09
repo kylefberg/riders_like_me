@@ -12,8 +12,9 @@
 
 <div class="container">
 
-  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+<div class="row">
     <% @riders.each do |rider| %>
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
       <% if rider != current_rider %>
           <a href="/details/<%= rider.id %>" >
             <div class="thumbnail" id="profiles">
@@ -24,10 +25,10 @@
             </div>
           </a>
       <% end %>
-    <% end %>
   </div>
+    <% end %>
 </div>
-
+</div>
 
 
 

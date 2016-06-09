@@ -20,10 +20,16 @@ class RidersController < ApplicationController
     @notice = flash[:notice]
     if params[:search]
       @riders = Rider.search(params[:search])
+    elsif current_rider
+      @riders = Rider.where.not(id: current_rider.id)
     else
       @riders = Rider.all
     end
   end
+
+
+
+
 
   def edit
     @rider = Rider.find params[:id]
