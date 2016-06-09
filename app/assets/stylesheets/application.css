@@ -14,7 +14,10 @@
  *= require_tree .
  *= require_self
  */
-
+.thumbnail {
+  background-color: lightgray;
+  border: 1px solid black;
+}
 .container {
   display: flex;
   justify-content: space-around;
