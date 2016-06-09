@@ -11,23 +11,22 @@
 </h2>
 
 <div class="container">
-
-<div class="row">
+  <div class="row">
     <% @riders.each do |rider| %>
-  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-      <% if rider != current_rider %>
-          <a href="/details/<%= rider.id %>" >
-            <div class="thumbnail" id="profiles">
-              <%= image_tag rider.profile_photo.url(:square) %>
-                <div class="caption">
-                  <h3><%= rider.name %></h3>
-                </div>
-            </div>
-          </a>
-      <% end %>
-  </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <% if rider != current_rider %>
+            <a href="/details/<%= rider.id %>" >
+              <div class="thumbnail" id="profiles">
+                <%= image_tag rider.profile_photo.url(:square) %>
+                  <div class="caption">
+                    <h3><%= rider.name %></h3>
+                  </div>
+              </div>
+            </a>
+        <% end %>
+      </div>
     <% end %>
-</div>
+  </div>
 </div>
 
 
