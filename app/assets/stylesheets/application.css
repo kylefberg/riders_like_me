@@ -19,6 +19,7 @@
   display: flex;
   justify-content: space-around;
   padding-top: 20px;
+  border-radius: 9px;
 }
 
 div {
@@ -44,8 +45,32 @@ h5 {
   border-radius: 9px;
 }
 
+#profiles {
+  max-width: 240px;
+
+}
+
+body {
+  padding: 20px;
+  margin: 20px !important;
+}
+
 .comment-box {
   width: 30%;
+}
+
+.btn {
+  margin: 8px;
+  justify-content: auto;
+}
+
+#edit_buttons {
+  display: flex;
+  padding: 10px;
+}
+
+#edit {
+  min-width: 64px;
 }
 
 div.panel {

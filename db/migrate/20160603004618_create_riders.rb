@@ -9,7 +9,7 @@ class CreateRiders < ActiveRecord::Migration
       t.string  :my_experience
       t.boolean :street
       t.boolean :adventure
-      t.boolean :duel_sport
+      t.boolean :dual_sport
       t.boolean :dirt
       t.string  :my_bike
       t.text    :my_bio

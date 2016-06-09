@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20160608214111) do
     t.string   "my_experience"
     t.boolean  "street"
     t.boolean  "adventure"
-    t.boolean  "duel_sport"
+    t.boolean  "dual_sport"
     t.boolean  "dirt"
     t.string   "my_bike"
     t.text     "my_bio"

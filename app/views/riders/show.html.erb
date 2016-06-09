@@ -16,10 +16,11 @@
   <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
     <h4><strong>Your Experience</strong></h4>
       <p><%= @rider.my_experience %></p>
+      <br>
     <h4><strong>Your Interests</strong></h4>
       <% if @rider.street %> <p>Street!</p> <% end %>
       <% if @rider.adventure %> <p>Adventure!</p> <% end %>
-      <% if @rider.duel_sport %> <p>Duel Sport!</p> <% end %>
+      <% if @rider.dual_sport %> <p>Dual Sport!</p> <% end %>
       <% if @rider.dirt %> <p>Dirt!</p> <% end %>
   </div>
 </div>
@@ -31,8 +32,8 @@
   <h4>My Bio</h4>
     <p><%= @rider.my_bio %></p>
 
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-<div class="btn btn-default"><%= link_to "edit", edit_rider_path(current_rider.id)%></div>
+<div id="edit_buttons" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-lg-offset-3">
+<div id="edit" class="btn btn-default"><%= link_to "edit", edit_rider_path(current_rider.id)%></div>
 <div class="btn btn-default"><%= link_to "delete", rider_path, data: {:confirm => 'Are you sure you want to delete?'}, :method => :delete %></div>
 </div>
 </div>

@@ -1,5 +1,6 @@
-<h1>About Me</h1>
-<%= form_for @rider do |f| %>
+<div class="class row">
+  <h1>About Me</h1>
+  <%= form_for @rider do |f| %>
   <% if @rider.errors.any? %>
     <div class="error_messages">
       <h2>Form is invalid</h2>
@@ -30,6 +31,9 @@
     <%= f.label :phone %>
     <%= f.text_field :phone %>
   </div>
+</div>
+
+<div class="class row">
   <div class="field">
     <%= f.label :my_experience %>
     <%= f.select(:my_experience, [['Beginner', 'Beginner'], ['Intermediate', 'Intermediate'], ['Advanced', 'Advanced']]) %>
@@ -44,8 +48,8 @@
     <%= label_tag(:adventure, "Adventure") %>
   </div>
   <div class="field">
-    <%= f.check_box(:duel_sport) %>
-    <%= label_tag(:duel_sport, "Duel Sport") %>
+    <%= f.check_box(:dual_sport) %>
+    <%= label_tag(:dual_sport, "Dual Sport") %>
   </div>
   <div class="field">
     <%= f.check_box(:dirt) %>
@@ -59,6 +63,7 @@
     <%= f.label :profile_photo %>
     <%= f.file_field :profile_photo %>
   </div>
+</div>
   <div class="field">
     <%= f.label :my_bio %>
     <%= f.text_area :my_bio %>

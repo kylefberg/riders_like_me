@@ -54,6 +54,6 @@ class RidersController < ApplicationController
 
   def rider_params
     params.require(:rider).permit(:name, :email, :password, :my_experience,
-    :password_confirmation, :phone, :my_bike, :my_bio, :street, :adventure, :duel_sport, :dirt, :profile_photo)
+    :password_confirmation, :phone, :my_bike, :my_bio, :street, :adventure, :dual_sport, :dirt, :profile_photo)
   end
 end
