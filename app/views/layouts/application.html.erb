@@ -9,25 +9,25 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header class ="container">
+  <div class ="container">
     <ul class="nav navbar-nav center">
       <%= link_to 'Home', root_path %>
-      &nbsp;&nbsp;|&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
       <% if current_rider %>
         <%= link_to 'Search', new_rider_path %>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
         Welcome, <%= current_rider.name %>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
         <%= link_to 'Profile', rider_path(current_rider.id) %>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
         <%= link_to 'Log Out', session_path('dummy'), method: :delete %>
       <% else %>
         <%= link_to 'Sign Up', new_rider_path %>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
         <%= link_to 'Log In', login_path %>
       <% end %>
     </ul>
-  </header>
+  </div>
 
 
 
