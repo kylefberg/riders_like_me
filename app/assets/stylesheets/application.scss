@@ -18,6 +18,7 @@
   background-color: lightgray;
   border: 1px solid black;
 }
+
 .container {
   display: flex;
   justify-content: space-around;
@@ -58,8 +59,8 @@ body {
   margin: 20px !important;
 }
 
-.comment-box {
-  width: 30%;
+.comments {
+  width: 100%;
 }
 
 .btn {
