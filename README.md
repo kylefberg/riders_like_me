@@ -14,10 +14,10 @@ Several people helped this project come to fruition. The following people played
 
 If you are a new motorcycle rider, or have been riding for quite some time but have moved into a new area and don't know other riders, this app is for you.   
 
-Riders Like Me is an app where you can create a profile to share with other riders listing your riding experience, interests and contact information. If you are looking for new friends, you can look through other rider profiles and leave comments on their page. 
+Riders Like Me is an app where you can create a profile to share with other riders listing your riding experience, interests and contact information. If you are looking for new friends, you can look through other rider profiles and leave comments on their page or contact them directly through their contact info. 
   
 
-![Screenshot](img/newScreenShot.png)  
+![Screenshot](public/screenshot.jpg)  
 
 
   
