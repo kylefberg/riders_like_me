@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Riders Like Me</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-</head>
-<body>
-  <div class ="container my-nav">
-    <ul class="nav navbar-nav center">
-      <%= link_to 'Home', root_path %>
-      &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-      <% if current_rider %>
-        Welcome, <%= current_rider.name %>
+  <head>
+    <title>Riders Like Me</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class ="container my-nav">
+      <ul class="nav navbar-nav center">
+        <%= link_to 'Home', root_path %>
         &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-        <%= link_to 'Profile', rider_path(current_rider.id) %>
-        &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-        <%= link_to 'Log Out', session_path('dummy'), method: :delete %>
-      <% else %>
-        <%= link_to 'Sign Up', new_rider_path %>
-        &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-        <%= link_to 'Log In', login_path %>
-      <% end %>
-    </ul>
-  </div>
+        <% if current_rider %>
+          Welcome, <%= current_rider.name %>
+          &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+          <%= link_to 'Profile', rider_path(current_rider.id) %>
+          &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+          <%= link_to 'Log Out', session_path('dummy'), method: :delete %>
+        <% else %>
+          <%= link_to 'Sign Up', new_rider_path %>
+          &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+          <%= link_to 'Log In', login_path %>
+        <% end %>
+      </ul>
+    </div>
 
-<%= yield %>
+    <%= yield %>
 
-</body>
+  </body>
 </html>

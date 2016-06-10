@@ -3,15 +3,14 @@
   <% if @bikes.errors.any? %>
     <div class="error_messages">
       <h2>Form is invalid</h2>
-      <ul>
-        <% for message in @rider.errors.full_messages %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% for message in @rider.errors.full_messages %>
+            <li><%= message %></li>
+         <% end %>
+        </ul>
     </div>
   <% end %>
-
-
+<% end %>
 
   <div class="field">
     <%= f.label :my_bike %>

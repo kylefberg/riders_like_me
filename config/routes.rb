@@ -20,6 +20,4 @@ Rails.application.routes.draw do
 
   delete '/logout', to: 'sessions#destroy'
   delete '/riders/:id', to: 'sessions#new'
-
-
 end

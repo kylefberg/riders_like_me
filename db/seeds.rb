@@ -33,7 +33,6 @@ rider = Rider.new(
   my_bike: "Suzuki",
   my_bio: "I have gone to Alaska by myself. It was challenging and fun and everyone should do it.",
   profile_photo: File.open(File.join(Rails.root, '/public/hanner.jpg'))
-
 )
 rider.save
 

@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 #   #  add the line below
 #   before_action :authorize, except: [:index, :show]
 
-  protect_from_forgery with: :exception
+protect_from_forgery with: :exception
 
 private
 
